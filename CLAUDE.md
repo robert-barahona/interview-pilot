@@ -18,6 +18,10 @@ This is an AI-powered interview simulator built with Next.js, TypeScript, and Ta
 
 - Always use arrow functions, never `function` declarations, expressions, or object method shorthand — utilities, hooks, event handlers, API route handlers, object literal callbacks (e.g. `ReadableStream({ start: async (controller) => {...} })`), etc.
 
+## Styling
+
+- Whenever dynamic class names are needed, always use the `cn` function from `src/utils/cn.ts` instead of manual string concatenation or template literals.
+
 ## Project Structure
 
 - `src/components/ui`: base, reusable components with no business logic (Button, Input, Card, Badge, Modal).
