@@ -1,31 +1,31 @@
 {
-  "name": "interview-pilot",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+	"name": "interview-pilot",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
 		"lint-and-format:check": "biome check",
 		"lint-and-format:fix": "biome check --write",
 		"ts:check": "tsc --noEmit",
 		"knip": "knip"
-  },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "next": "16.2.10",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "tailwind-merge": "^3.6.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.5.2",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "knip": "^6.25.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+	},
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"next": "16.2.10",
+		"react": "19.2.4",
+		"react-dom": "19.2.4",
+		"tailwind-merge": "^3.6.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.2",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"knip": "^6.25.0",
+		"tailwindcss": "^4",
+		"typescript": "^5"
+	}
 }
