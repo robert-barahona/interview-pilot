@@ -1,0 +1,46 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+	/* Light mode */
+	--bg-primary: #efede7;
+	--surface-primary: #ffffff;
+	--surface-secondary: #fbfaf7;
+	--border: #d6d3ca;
+	--text-primary: #1c1c1a;
+	--text-secondary: #6b6963;
+	--text-muted: #7a776e;
+
+	--accent: #5b4a6f;
+	--accent-hover: #4a3b5c;
+	--accent-text: #ffffff;
+}
+
+.dark {
+	--bg-primary: #2a2a28;
+	--surface-primary: #403f39;
+	--surface-secondary: #35342f;
+	--border: #55534b;
+	--text-primary: #f5f3ee;
+	--text-secondary: #b8b5ad;
+	--text-muted: #9c978c;
+
+	--accent: #7c4def;
+	--accent-hover: #8c61f0;
+	--accent-text: #ffffff;
+}
+
+/* Conecta las variables al motor de utilidades de Tailwind */
+@theme {
+	--color-bg-primary: var(--bg-primary);
+	--color-surface-primary: var(--surface-primary);
+	--color-surface-secondary: var(--surface-secondary);
+	--color-border: var(--border);
+	--color-text-primary: var(--text-primary);
+	--color-text-secondary: var(--text-secondary);
+	--color-text-muted: var(--text-muted);
+	--color-accent: var(--accent);
+	--color-accent-hover: var(--accent-hover);
+	--color-accent-text: var(--accent-text);
+
+	--font-sans: var(--font-geist-sans);
+}
