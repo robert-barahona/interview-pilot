@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check",
-    "format": "biome format --write"
+		"lint-and-format:check": "biome check",
+		"lint-and-format:fix": "biome check --write",
+		"ts:check": "tsc --noEmit",
+		"knip": "knip"
   },
   "dependencies": {
     "next": "16.2.10",
