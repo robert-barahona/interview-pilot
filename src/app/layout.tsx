@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import type { FC, ReactNode } from "react"
 import "../styles/globals.css"
+import type { FC, PropsWithChildren } from "react"
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -18,11 +18,7 @@ export const metadata: Metadata = {
 	description: "AI-powered mock interview simulator",
 }
 
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode
-}>) {
+const RootLayout: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<html
 			lang="en"
@@ -32,3 +28,6 @@ export default function RootLayout({
 		</html>
 	)
 }
+
+// biome-ignore lint/style/noDefaultExport: needed for layout
+export default RootLayout

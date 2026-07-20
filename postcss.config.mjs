@@ -4,4 +4,5 @@ const config = {
 	},
 }
 
+// biome-ignore lint/style/noDefaultExport: needed
 export default config
