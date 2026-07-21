@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react"
+import { DEFAULT_LANG } from "@/config/constants"
 import type {
 	SpeechRecognitionErrorEventLike,
 	SpeechRecognitionEventLike,
 	SpeechRecognitionLike,
 } from "@/types/speechRecognitionTypes"
 
-const DEFAULT_LANG = "en-US"
 const DEFAULT_SILENCE_TIMEOUT_MS = 1500
 
 interface UseSpeechRecognitionOptions {
