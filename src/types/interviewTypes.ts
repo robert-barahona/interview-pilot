@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-const questionSchema = z.object({
+export const questionSchema = z.object({
 	id: z.string(),
 	text: z.string(),
 	category: z.enum(["technical", "behavioral"]),
@@ -13,6 +13,12 @@ export type QuestionDifficulty = Question["difficulty"]
 
 export const generatedQuestionsSchema = z.object({
 	questions: z.array(questionSchema).min(5).max(8),
+})
+
+export const answerEvaluationSchema = z.object({
+	score: z.number().int().min(1).max(10),
+	improvements: z.array(z.string()),
+	briefFeedback: z.string(),
 })
 
 export interface Answer {
