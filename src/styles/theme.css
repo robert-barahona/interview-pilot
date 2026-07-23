@@ -13,6 +13,10 @@
 	--accent: #5b4a6f;
 	--accent-hover: #4a3b5c;
 	--accent-text: #ffffff;
+
+	--danger: #b3261e;
+	--danger-bg: #fbeceb;
+	--danger-border: #f0c9c6;
 }
 
 .dark {
@@ -27,6 +31,10 @@
 	--accent: #7c4def;
 	--accent-hover: #8c61f0;
 	--accent-text: #ffffff;
+
+	--danger: #ff6b61;
+	--danger-bg: #4a2420;
+	--danger-border: #6b332c;
 }
 
 /* Conecta las variables al motor de utilidades de Tailwind */
@@ -41,6 +49,10 @@
 	--color-accent: var(--accent);
 	--color-accent-hover: var(--accent-hover);
 	--color-accent-text: var(--accent-text);
+
+	--color-danger: var(--danger);
+	--color-danger-bg: var(--danger-bg);
+	--color-danger-border: var(--danger-border);
 
 	--font-sans: var(--font-geist-sans);
 }
