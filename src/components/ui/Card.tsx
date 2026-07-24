@@ -8,7 +8,7 @@ interface CardProps extends PropsWithChildren {
 export const Card: FC<CardProps> = ({ className, children }) => (
 	<div
 		className={cn(
-			"rounded-2xl border border-border bg-surface-primary p-6 shadow-sm",
+			"rounded-2xl border border-border bg-surface-primary p-6",
 			className,
 		)}
 	>
