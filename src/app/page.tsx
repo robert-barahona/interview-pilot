@@ -1,11 +1,7 @@
 import type { FC } from "react"
-import { SetupForm } from "@/components/feature/setup/SetupForm"
+import { SetupScreen } from "@/components/feature/setup/SetupScreen"
 
-const Home: FC = () => (
-	<main className="flex flex-1 items-center justify-center p-4">
-		<SetupForm />
-	</main>
-)
+const Home: FC = () => <SetupScreen />
 
 // biome-ignore lint/style/noDefaultExport: needed for pages
 export default Home
