@@ -24,7 +24,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
 			lang="en"
 			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 		>
-			<body className="flex min-h-full flex-col">{children}</body>
+			<body className="flex min-h-full flex-col bg-bg-primary">{children}</body>
 		</html>
 	)
 }

@@ -45,7 +45,15 @@ export const useSpeechRecognition = ({
 	const onSilenceRef = useRef(onSilence)
 	onSilenceRef.current = onSilence
 
-	const isSupported = Boolean(getSpeechRecognitionConstructor())
+	// Starts false to match the server-rendered markup, then flips on mount —
+	// resolving the constructor directly in the render body would render
+	// differently on the server than on the client and trigger a hydration
+	// mismatch.
+	const [isSupported, setIsSupported] = useState(false)
+
+	useEffect(() => {
+		setIsSupported(Boolean(getSpeechRecognitionConstructor()))
+	}, [])
 
 	const clearSilenceTimer = useCallback(() => {
 		if (silenceTimerRef.current) {

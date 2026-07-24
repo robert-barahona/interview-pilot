@@ -1,4 +1,5 @@
 import { z } from "zod"
+import type { ApiErrorResponse } from "@/types/apiTypes"
 
 export const questionSchema = z.object({
 	id: z.string(),
@@ -14,6 +15,9 @@ export type QuestionDifficulty = Question["difficulty"]
 export const generatedQuestionsSchema = z.object({
 	questions: z.array(questionSchema).min(5).max(8),
 })
+
+export type GeneratedQuestions = z.infer<typeof generatedQuestionsSchema>
+export type GenerateQuestionsResponse = GeneratedQuestions | ApiErrorResponse
 
 export const answerEvaluationSchema = z.object({
 	score: z.number().int().min(1).max(10),

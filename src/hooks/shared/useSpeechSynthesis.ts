@@ -19,8 +19,15 @@ export const useSpeechSynthesis = ({
 	const [isSpeaking, setIsSpeaking] = useState(false)
 	const [error, setError] = useState<string | null>(null)
 
-	const isSupported =
-		typeof window !== "undefined" && "speechSynthesis" in window
+	// Starts false to match the server-rendered markup, then flips on mount —
+	// checking `"speechSynthesis" in window` directly in the render body
+	// would render differently on the server than on the client and trigger
+	// a hydration mismatch.
+	const [isSupported, setIsSupported] = useState(false)
+
+	useEffect(() => {
+		setIsSupported(typeof window !== "undefined" && "speechSynthesis" in window)
+	}, [])
 
 	const stop = useCallback(() => {
 		if (isSupported) {
